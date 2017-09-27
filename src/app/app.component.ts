@@ -1,3 +1,4 @@
+import { AppService } from './app.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -5,6 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'app';
+
+export class AppComponent{
+
+  constructor(private AppService : AppService){
+  }
+
+  title: string = 'My first AGM project';
+  lat: number = 51.678418;
+  lng: number = 7.809007;
 }
